@@ -1,11 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
+#include "testSingleList.h"
+
 //给你一个链表的头节点 head 和一个整数 val ，请你删除链表中所有满足 Node.val == val 的节点，并返回 新的头节点 。
-//Definition for singly-linked list.
-struct ListNode {
-    int val;
-    struct ListNode *next;
-};
+
 
 struct ListNode* removeElements(struct ListNode* head, int val) {
     //prev保存上一个节点，cur保存要删除的节点
@@ -38,3 +35,21 @@ struct ListNode* removeElements(struct ListNode* head, int val) {
     }
     return head;//返回头节点
 }
+
+//int main()
+//{
+//    struct ListNode* head = NULL;
+//    SListPushBack(&head, 1);
+//    SListPushBack(&head, 2);
+//    SListPushBack(&head, 6);
+//    SListPushBack(&head, 3);
+//    SListPushBack(&head, 4);
+//    SListPushBack(&head, 5);
+//    SListPushBack(&head, 6);
+//
+//    SListPrint(head);
+//
+//    head = removeElements(head, 6);
+//    SListPrint(head);
+//    return 0;
+//}
